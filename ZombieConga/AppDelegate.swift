@@ -4,6 +4,7 @@
 //
 //  Created by Frank Thamel on 6/4/16.
 //  Copyright © 2016 co.talene. All rights reserved.
+//  //  Practice project. Orginal source included in the book "2D IOS and tvOS Games by Tutorials" by https://www.raywenderlich.com
 //
 
 import UIKit

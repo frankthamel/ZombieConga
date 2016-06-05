@@ -15,6 +15,7 @@
 		462A2BF71D0294BE00484B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462A2BF51D0294BE00484B57 /* LaunchScreen.storyboard */; };
 		462A2C021D0294BE00484B57 /* ZombieCongaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A2C011D0294BE00484B57 /* ZombieCongaTests.swift */; };
 		462A2C0D1D0294BE00484B57 /* ZombieCongaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A2C0C1D0294BE00484B57 /* ZombieCongaUITests.swift */; };
+		4680FF1B1D0407D800719003 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4680FF1A1D0407D800719003 /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		462A2C081D0294BE00484B57 /* ZombieCongaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZombieCongaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		462A2C0C1D0294BE00484B57 /* ZombieCongaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZombieCongaUITests.swift; sourceTree = "<group>"; };
 		462A2C0E1D0294BE00484B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4680FF1A1D0407D800719003 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				462A2BF31D0294BE00484B57 /* Assets.xcassets */,
 				462A2BF51D0294BE00484B57 /* LaunchScreen.storyboard */,
 				462A2BF81D0294BE00484B57 /* Info.plist */,
+				4680FF1A1D0407D800719003 /* MyUtils.swift */,
 			);
 			path = ZombieConga;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				462A2BED1D0294BE00484B57 /* GameScene.swift in Sources */,
 				462A2BEF1D0294BE00484B57 /* GameViewController.swift in Sources */,
 				462A2BE91D0294BE00484B57 /* AppDelegate.swift in Sources */,
+				4680FF1B1D0407D800719003 /* MyUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +497,7 @@
 				462A2C131D0294BE00484B57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462A2C141D0294BE00484B57 /* Build configuration list for PBXNativeTarget "ZombieCongaTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +506,7 @@
 				462A2C161D0294BE00484B57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462A2C171D0294BE00484B57 /* Build configuration list for PBXNativeTarget "ZombieCongaUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +515,7 @@
 				462A2C191D0294BE00484B57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
