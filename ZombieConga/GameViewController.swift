@@ -4,7 +4,7 @@
 //
 //  Created by Frank Thamel on 6/4/16.
 //  Copyright (c) 2016 co.talene. All rights reserved.
-//  //  Practice project. Orginal source included in the book "2D IOS and tvOS Games by Tutorials" by https://www.raywenderlich.com
+//  Practice project. Orginal source included in the book "2D IOS and tvOS Games by Tutorials" by https://www.raywenderlich.com
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene  = GameScene(size:CGSize(width: 2048, height: 1536))
+        let scene  = MainMenuScene(size:CGSize(width: 2048, height: 1536))
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
