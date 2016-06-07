@@ -42,5 +42,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GLIMSTIC.TTF</string>
+		<string>zombienoize.ttf</string>
+	</array>
 </dict>
 </plist>

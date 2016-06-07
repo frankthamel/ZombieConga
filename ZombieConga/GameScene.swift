@@ -29,6 +29,8 @@ class GameScene: SKScene {
     var gameOver = false
     let cameraNode = SKCameraNode()
     let cameraMovePointsPerSec : CGFloat = 200.0
+    let livesLabel = SKLabelNode(fontNamed: "Zombie-Noize")
+    let catCountLabel = SKLabelNode(fontNamed: "Zombie-Noize")
     
     
     override init(size: CGSize) {
@@ -85,6 +87,23 @@ class GameScene: SKScene {
         //cameraNode.position = CGPoint(x: size.width/2, y: size.height/2)
         //cameraNode.position = zombie.position
         setCameraPosition(CGPoint(x: size.width/2, y: size.height/2))
+        
+        
+        livesLabel.fontColor = SKColor.whiteColor()
+        livesLabel.fontSize = 100
+        livesLabel.zPosition = 100
+        livesLabel.horizontalAlignmentMode = .Left
+        livesLabel.verticalAlignmentMode = .Bottom
+        livesLabel.position = CGPoint(x: -playableRect.size.width/2 + CGFloat(20), y: -playableRect.size.height/2+CGFloat(20)+overlapAmount()/2)
+        cameraNode.addChild(livesLabel)
+        
+        catCountLabel.fontColor = SKColor.whiteColor()
+        catCountLabel.fontSize = 100
+        catCountLabel.zPosition = 100
+        catCountLabel.horizontalAlignmentMode = .Right
+        catCountLabel.verticalAlignmentMode = .Bottom
+        catCountLabel.position = CGPoint(x: playableRect.size.width/2 - CGFloat(20), y: -playableRect.size.height/2+CGFloat(20)+overlapAmount()/2)
+        cameraNode.addChild(catCountLabel)
 
     }
     
@@ -279,7 +298,7 @@ class GameScene: SKScene {
     
     func zombieHitEnemy (enemy : SKSpriteNode) {
         looseCats()
-        lives--
+        lives = lives - 1
       
         if !zombieIsInvisible {
             runAction(enemyCollisionSound)
@@ -339,7 +358,7 @@ class GameScene: SKScene {
         var targetPosition = zombie.position
         
         enumerateChildNodesWithName("train") { node, stop in
-            trainCount++
+            trainCount = trainCount + 1
             if !node.hasActions() {
                 
                 let actionDuration = 0.3
@@ -363,6 +382,9 @@ class GameScene: SKScene {
             let reveal = SKTransition.flipHorizontalWithDuration(0.5)
             view?.presentScene(gameOverScene, transition: reveal)
         }
+        
+        livesLabel.text = "Lives : \(lives)"
+        catCountLabel.text = "Cats : \(trainCount)"
     }
     
     func looseCats() {
@@ -384,7 +406,7 @@ class GameScene: SKScene {
                     SKAction.removeFromParent()
                     ])
             )
-            loseCount++
+            loseCount = loseCount + 1
             if loseCount >= 2 {
                 stop.memory = true
             }
